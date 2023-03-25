@@ -1,19 +1,20 @@
-import React from 'react'
 import Head from 'next/head'
 import Navbar from './Navbar'
 import Footer from './Footer'
 
+
 const Layout = ({ children }) => {
+
   return (
     <div className=''>
       <Head>
         <title>Heels shop</title>
       </Head>
       <div className='flex flex-col justify-between h-screen'>
-        <header>
+        <header data-aos='fade-down' data-aos-duration='1000' >
           <Navbar />
         </header>
-        <main className=' max-w-screen-2xl m-auto w-full'>{children}</main>
+        <main className='w-full flex justify-center items-center flex-col'>{children}</main>
         <footer>
           <Footer />
         </footer>

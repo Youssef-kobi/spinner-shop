@@ -1,45 +1,48 @@
 import React from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
-import { urlFor } from '../lib/client'
+// import Link from 'next/link'
+// import { urlFor } from '../lib/client'
+import spinnerImg from '../assets/spinner.png'
 
-const HeroBanner = ({ bannerData }) => {
+const HeroBanner = () => {
   return (
-    <div className='py-20 px-10 relative h-[580px] rounded-2xl text-base'>
-      <div className='absolute z-10'>
-        <p className='text-xl'>{bannerData.smallText}</p>
-        <h3 className='mt-1 text-6xl'>{bannerData.midText}</h3>
-        <h1 className='text-white-pure text-9xl uppercase -ml-6'>
-          {bannerData.largeText1}
-        </h1>
-        <Link href={`/product/${bannerData.product}`}>
-          <button
-            className=' rounded-2xl py-2 px-4 bg-red-500 text-white-pure border-none mt-10 text-lg font-medium'
-            type='button'
+    <div className=' flex justify-center bg-gradient-to-br to-blue-gem-400 via-blue-gem-500 from-blue-gem-900'>
+      <div className=' w-4/5 flex flex-col md:flex-row items-center justify-center h-screen'>
+        <div className='w-full md:w-1/2'>
+          <h1
+            className='text-4xl sm:text-6xl md:text-8xl font-bold  text-gray-200 mb-4 '
+            data-aos='fade-right'
+            data-aos-mirror='true'
           >
-            {bannerData.buttonText}
-          </button>
-        </Link>
-      </div>
-      {/* <video className='' autoPlay playsInline muted loop>
-        <source src='/heels.mp4' type='video/mp4' />
-      </video> */}
-      <Image
-        src={urlFor(bannerData.image[0]).url()}
-        alt='headphones'
-        fill={true}
-        draggable={false}
-        sizes='100vw'
-        className='rounded-3xl'
-      />
-      <div>
-        <div className='absolute right-[10%] bottom-[5%] w-3/4 flex flex-col text-blue-dark'>
-          <h5 className='mb-3 font-bold text-base text-black-faded self-end '>
-            Description
-          </h5>
-          <p className='font-thin text-gray-base text-right '>
-            {bannerData.desc}
+            Get in the Spin of Things
+          </h1>
+          <p
+            className='text-xl sm:text-2xl md:text-4xl italic text-blue-gem-300  mb-8'
+            data-aos='fade-left'
+            data-aos-delay='200'
+          >
+            Experience the Ultimate Relaxation with Our Spinner Toys
           </p>
+          <button
+            className='bg-violet-500 hover:bg-violet-600 hover:scale-110  duration-300 text-white font-bold py-4 px-6  rounded-full'
+            data-aos='fade-up'
+            data-aos-delay='400'
+          >
+            Shop Now
+          </button>
+        </div>
+        <div
+          className='w-full md:w-1/2 flex items-center justify-center'
+          data-aos='zoom-in-right'
+          data-aos-delay='200'
+        >
+          <Image
+            src={spinnerImg}
+            alt='Spinner Image'
+            width={800}
+            height={800}
+            objectFit='contain'
+          />
         </div>
       </div>
     </div>

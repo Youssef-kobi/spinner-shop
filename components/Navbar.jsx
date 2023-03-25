@@ -1,29 +1,60 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Cart from './Cart'
 import { useStateContext } from '../Context/StateContext'
+import Image from 'next/image'
+import logo from '../assets/Logo.svg'
 const Navbar = () => {
-  const { totalQuantities, setShowCart } = useStateContext()
-  return (
-    <nav className='flex justify-between p-6'>
-      <p>
-        <Link href='/'>logo</Link>
-      </p>
+  const { totalQuantities, setShowCart, showCart } = useStateContext()
+  const [spin, setSpin] = useState(false)
 
-      <div className='flex justify-between text-lg  font-semibold '>
-        <p className='mr-4 hover:scale-110 duration-100 '>
+  useEffect(() => {
+    // Add the animate-spin class after 1 second
+    const timeoutId = setTimeout(() => {
+      setSpin(true)
+    }, 1000)
+
+    // Remove the animate-spin class after 3 seconds
+    const timeoutId2 = setTimeout(() => {
+      setSpin(false)
+    }, 3000)
+
+    // Clean up the timeouts when the component unmounts
+    return () => {
+      clearTimeout(timeoutId)
+      clearTimeout(timeoutId2)
+    }
+  }, [])
+  return (
+    <nav className='flex items-center p-4 rounded-b-3xl w-full bg-white bg-opacity-60 absolute'>
+      <p className='w-1/12 ml-4'>
+        <Link className='flex' href='/'>
+          <Image
+            src={logo}
+            alt='logo'
+            width={60}
+            height={60}
+            data-aos={{
+              rotate: '-360',
+              duration: 3000,
+            }}
+            className={
+              `${spin ? 'animate-spin transition-all duration-3000 ease-out ': ''} m-0`
+            }
+          />
+        </Link>
+      </p>
+      <div className='flex items-center w-5/6 text-xl  font-semibold '>
+        <p className='mr-6 hover:scale-110 duration-100 '>
           <Link href='/'>Home</Link>
         </p>
-        <p className='mr-4 hover:scale-110 duration-100'>
-          <Link href='/search?Categories=women'>Women</Link>
+        <p className='mr-6 hover:scale-110 duration-100'>
+          <Link href='/Faq'>FAQ</Link>
         </p>
-        <p className='mr-4 hover:scale-110 duration-100'>
-          <Link  href='/search?Categories=kids'>Kids</Link>
-        </p>
-        <p className='mr-4 hover:scale-110 duration-100'>
+        <p className='mr-6 hover:scale-110 duration-100'>
           <Link href='/'>About us</Link>
         </p>
-        <p className='mr-4 hover:scale-110 duration-100'>
+        <p className='mr-6 hover:scale-110 duration-100'>
           <Link href='/'>Contact</Link>
         </p>
       </div>
@@ -49,7 +80,7 @@ const Navbar = () => {
           {totalQuantities}
         </span>
       </button>
-      <Cart />
+      {showCart && <Cart />}
     </nav>
   )
 }

@@ -1,12 +1,14 @@
 import { client, urlFor } from '../lib/client'
 import { Product, FooterBanner, HeroBanner } from '../components'
 import Link from 'next/link'
+import Features from '../components/Features'
 
 const Home = ({ productsData, bannerData }) => {
   console.log(bannerData)
   return (
-    <div className='flex flex-col h-full justify-between'>
-      <HeroBanner bannerData={bannerData.length && bannerData[0]} />
+    <div className='flex flex-col h-full justify-between items-center'>
+      <HeroBanner />
+      <Features />
       <div>
         <div className='my-16'>
           <div className='text-center my-6 text-blue-dark'>

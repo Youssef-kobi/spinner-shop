@@ -33,25 +33,17 @@ module.exports = {
         },
       },
       colors: {
-        white: {
-          pure: '#ffffff',
-          light: '#f5f7fb',
-        },
-        blue: {
-          dark: '#324d67',
-        },
-        black: {
-          light: '#495057',
-          faded: '#00000059',
-        },
-        gray: {
-          base: '#5f5f5f',
-          light: '#ebebeb',
-          background: '#fafafa',
-          primary: '#dbdbdb',
-        },
-        red: {
-          primary: '#ed4956 ',
+        'blue-gem': {
+          50: '#f2f2ff',
+          100: '#e8e7ff',
+          200: '#d3d2ff',
+          300: '#b2aeff',
+          400: '#8c81ff',
+          500: '#664dff',
+          600: '#5329fe',
+          700: '#4517ea',
+          800: '#3913c4',
+          900: '#2f119a',
         },
       },
       fontFamily: {
