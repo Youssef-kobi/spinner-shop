@@ -1,0 +1,55 @@
+{
+  "nav": {
+    "home": "Home",
+    "faq": "FAQ",
+    "about": "About",
+    "contact": "Contact Us"
+  },
+  "heroBanner": {
+    "title": "Welcome to the World of Flying Spinners",
+    "subtitle": "Experience the ultimate fun and excitement with our solid PP plastic Flying Spinners. Suitable for all ages and with fast charging capability, our spinners are the perfect toys for any occasion.",
+    "button": "Shop Now"
+  },
+  "features": {
+    "headerTitle": "Features",
+    "title1": "Solid PP Plastic Construction",
+    "subText1": "Our Flying Spinners are made with high-quality and durable PP plastic that can withstand heavy usage and crashes. You can enjoy countless hours of fun without worrying about breakage or damage.",
+    "description1": "Our Flying Spinners are made with high-quality and durable PP plastic that can withstand heavy usage and crashes. You can enjoy countless hours of fun without worrying about breakage or damage. The solid construction also ensures a stable and smooth flight, making it easier for you to perform tricks and stunts.",
+    "title2": "Fast Charging Capability",
+    "description2": "Our Flying Spinners come with a fast-charging feature that allows you to charge them fully in just a few minutes. This means you can spend more time playing and less time waiting for the spinner to charge. The charger is also compact and easy to carry, making it convenient for you to charge on the go.",
+    "subText2": "Our Flying Spinners come with a fast-charging feature that allows you to charge them fully in just a few minutes.",
+    "title3": "Stress-Relieving",
+    "description3": "Our Flying Spinners are not only fun and exciting but also great stress-relievers. Playing with our spinners can help you relax and calm your mind, making them perfect for anyone who wants to relieve stress and anxiety.",
+    "subText3": "Playing with our spinners can help you relax and calm your mind."
+  },
+  "Testimonials": {
+    "headerTitle": "Testimonials",
+    "title1": "Amazing Quality and Performance",
+    "review1": "I am thoroughly impressed with the quality and performance of the Flying Spinner. It is easy to control and performs flawlessly, providing endless hours of entertainment for me and my friends.",
+    "title2": "Great Stress-Reliever",
+    "review2": "Playing with the Flying Spinner has become my favorite way to relieve stress after a long day at work. It's fun, easy to use, and always puts me in a good mood.",
+    "title3": "Perfect Gift for Kids",
+    "review3": "I bought the Flying Spinner as a gift for my nephew, and he absolutely loves it. It's easy for him to control, and he loves showing off his tricks to his friends."
+  },
+  "footer": {
+    "contactInformation": "Contact Information",
+    "socialMediaLinks": "Social Media Links",
+    "navigationMenu": "Navigation Menu",
+    "home": "Home",
+    "products": "Products",
+    "aboutUs": "About Us",
+    "contactUs": "Contact Us",
+    "newsletterSignup": "Newsletter Signup",
+    "signUp": "Sign Up",
+    "paymentMethods": "Payment Methods",
+    "securePayments": "Secure Payments with SSL Encryption",
+    "privacyPolicy": "Privacy Policy | Terms and Conditions",
+    "copyRight": "© 2023 Flying Spinners. All rights reserved."
+  },
+  "product": {
+    "price": "Price",
+    "addToCart": "Add to Cart",
+    "outOfStock": "Out of Stock",
+    "productAddedToCart": "Product added to cart"
+  }
+}

@@ -1,4 +1,39 @@
-@tailwind base; 
-@tailwind components; 
+@tailwind base;
+@tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
+html {
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.aos-init[data-aos][data-aos].aos-animate {
+  transform: unset;
+}
+
+.gradientButton::before {
+    content: '';
+    position: absolute;
+    top: -25%;
+    left: -50%;
+    width: 200%;
+    height: 10%;
+    background-image: linear-gradient(50deg, rgba(255, 140, 0, 0.2), rgba(255, 255, 255, 0.5), rgba(255, 140, 0, 0.2));
+    transform: rotate(50deg);
+    animation: gradient-animation 3s infinite linear forwards;
+}
+
+@keyframes gradient-animation {
+    0%, 10% {
+        transform: translateX(-50%) rotate(45deg);
+    }
+    100% {
+        transform: translateX(150%) rotate(45deg);
+    }
+}
