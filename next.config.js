@@ -5,7 +5,7 @@ const nextConfig = {
   reactStrictMode: true,
   i18n,
   images: {
-    domains: ['cdn.sanity.io'],
+    domains: ['res.cloudinary.com'],
   },
 }
 

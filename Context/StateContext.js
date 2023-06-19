@@ -10,9 +10,9 @@ const StateContext = ({ children }) => {
   const [qty, setQty] = useState(1)
 
   const onRemove = (product) => {
-    const foundProduct = cartItems.find((item) => item._id === product._id)
+    const foundProduct = cartItems.find((item) => item.id === product.id)
     setCartItems((prevCartItems) =>
-      prevCartItems.filter((item) => item._id !== product._id)
+      prevCartItems.filter((item) => item.id !== product.id)
     )
     setTotalPrice(
       (prevTotalPrice) =>
@@ -24,12 +24,12 @@ const StateContext = ({ children }) => {
   }
 
   const onAdd = (product, quantity) => {
-    const productInCart = cartItems.find((item) => item._id === product._id)
+    const productInCart = cartItems.find((item) => item.id === product.id)
     setTotalPrice((prevTotalPrice) => prevTotalPrice + product.price * quantity)
     setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + quantity)
     if (productInCart) {
       const updateCartItems = cartItems.map((cartProduct) => {
-        if (cartProduct._id === product._id)
+        if (cartProduct.id === product.id)
           return {
             ...cartProduct,
             quantity: cartProduct.quantity + quantity,
@@ -43,10 +43,11 @@ const StateContext = ({ children }) => {
     toast.success(`${quantity} ${product.name} added to the Cart`)
   }
   const toggleCartItemQuantity = (id, value) => {
-    const foundProduct = cartItems.find((item) => item._id === id)
-    const newCartItem = cartItems.filter((item) => item._id !== id)
+    const foundProduct = cartItems.find((item) => item.id === id)
+    const newCartItem = cartItems.filter((item) => item.id !== id)
 
     if (value === 'inc') {
+      console.log(foundProduct)
       setCartItems([
         ...newCartItem,
         { ...foundProduct, quantity: foundProduct.quantity + 1 },

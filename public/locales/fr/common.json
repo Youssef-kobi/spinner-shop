@@ -11,16 +11,16 @@
     "button": "Acheter maintenant"
   },
   "features": {
-    "headerTitle": "Caractéristiques",
-    "title1": "Construction en plastique PP solide",
-    "subText1": "Nos Flying Spinners sont fabriqués avec un plastique PP de haute qualité et durable qui peut supporter une utilisation intense et des chocs. Vous pouvez profiter de nombreuses heures de plaisir sans vous soucier de la casse ou des dommages.",
-    "description1": "Nos Flying Spinners sont fabriqués avec un plastique PP de haute qualité et durable qui peut supporter une utilisation intense et des chocs. Vous pouvez profiter de nombreuses heures de plaisir sans vous soucier de la casse ou des dommages. La construction solide garantit également un vol stable et fluide, ce qui facilite la réalisation de tours et de cascades.",
-    "title2": "Capacité de charge rapide",
-    "description2": "Nos Flying Spinners sont dotés d'une fonction de charge rapide qui vous permet de les charger complètement en quelques minutes seulement. Cela signifie que vous pouvez passer plus de temps à jouer et moins de temps à attendre que le spinner se charge. Le chargeur est également compact et facile à transporter, ce qui le rend pratique pour vous de charger en déplacement.",
-    "subText2": "Nos Flying Spinners sont dotés d'une fonction de charge rapide qui vous permet de les charger complètement en quelques minutes seulement.",
-    "title3": "Antistress",
-    "description3": "Nos Flying Spinners ne sont pas seulement amusants et excitants, mais également d'excellents antistress. Jouer avec nos spinners peut vous aider à vous détendre et à calmer votre esprit, les rendant parfaits pour toute personne souhaitant soulager le stress et l'anxiété.",
-    "subText3": "Jouer avec nos spinners peut vous aider à vous détendre et à calmer votre esprit."
+    "headerTitle": "Découvrez le plaisir avec nos Flying Spinners riches en fonctionnalités",
+    "title1": "Construction robuste en plastique PP",
+    "subText1": "Découvrez la durabilité de nos Flying Spinners, fabriqués à partir de plastique PP de première qualité pour résister à une utilisation intense et aux accidents.",
+    "description1": "Savourez des heures interminables de plaisir exaltant sans vous soucier des dommages. La construction robuste garantit un vol stable, vous permettant d'exécuter des tours et des acrobaties avec facilité.",
+    "title2": "Charge rapide pour un plaisir sans fin",
+    "subText2": "Dites adieu aux longs temps d'attente avec la fonction de charge rapide de nos Flying Spinners, alimentant votre appareil en quelques minutes seulement.",
+    "description2": "Maximisez votre temps de jeu et minimisez le temps de charge. Le chargeur compact est facile à transporter, offrant la commodité de charger où que vous soyez.",
+    "title3": "Technologie IA révolutionnaire",
+    "subText3": "Améliorez votre jeu avec nos Flying Spinners, équipés d'une technologie IA de pointe pour une expérience de jeu améliorée.",
+    "description3": "La technologie IA adapte le vol du spinner à votre style, créant une expérience unique et personnalisée à chaque fois. Elle assure également un vol plus sûr en évitant les obstacles et en maintenant une trajectoire de vol stable. Découvrez un jeu plus intelligent et plus amusant avec nos Flying Spinners alimentés par l'IA."
   },
   "Testimonials": {
     "headerTitle": "Témoignages",
@@ -46,10 +46,32 @@
     "privacyPolicy": "Politique de confidentialité | Conditions générales de vente",
     "copyRight": "© 2023 Flying Spinners. Tous droits réservés."
   },
+  "aboutUs": {
+    "title": "À propos de notre boutique de toupies volantes",
+    "description": "Bienvenue chez FlySpin, la destination en ligne pour des toupies volantes de haute qualité et durables, parfaites pour les débutants et les utilisateurs avancés. Notre mission est d'inspirer la créativité et l'imagination à travers la joie des toupies volantes, et nous sommes passionnés par la fourniture à nos clients de la meilleure sélection, des meilleurs prix et du meilleur service.\n\nNotre histoire a commencé avec une idée simple : créer un magasin qui célèbre le plaisir et l'excitation des toupies volantes, et partager cette passion avec le monde entier. Nous avons vu un créneau sur le marché pour des toupies volantes de haute qualité qui étaient à la fois abordables et durables, et nous avons entrepris de combler ce vide avec une sélection de produits soigneusement choisis qui répondent à nos normes élevées en matière de performance, de design et de valeur.\n\nChez FlySpin, nous croyons que les toupies volantes sont plus que de simples jouets. Ce sont des outils d'expression de soi, des véhicules de créativité et un moyen de se connecter avec d'autres personnes qui partagent notre amour du vol. C'est pourquoi nous sommes plus qu'un simple magasin - nous sommes une communauté de personnes ayant les mêmes centres d'intérêt, unies par une passion pour les toupies volantes et la joie qu'elles procurent.\n\nNotre équipe est composée d'experts dans le domaine des toupies volantes, des ingénieurs et des designers aux passionnés et collectionneurs. Nous sommes dévoués à fournir à nos clients la meilleure expérience possible, que vous cherchiez des conseils et de l'aide en tant que débutant ou que vous souhaitiez améliorer vos compétences avec les toupies volantes.\n\nLorsque vous magasinez chez FlySpin, vous pouvez faire confiance à notre engagement envers la qualité et la satisfaction du client. Nous sommes constamment en train d'ajouter de nouveaux produits et d'améliorer notre service pour répondre aux besoins de nos clients, et nous sommes impatients de vous aider à trouver votre prochaine toupie volante préférée.\n\nQue vous soyez un professionnel chevronné ou que vous commenciez tout juste, venez rejoindre notre communauté d'enthousiastes de toupies volantes et vivre la sensation du vol avec FlySpin."
+  },
+  "contact": {
+    "title": "Nous contacter",
+    "description": "Remplissez le formulaire ci-dessous pour nous envoyer un message",
+    "form": {
+      "firstName": "Prénom",
+      "lastName": "Nom de famille",
+      "email": "Email",
+      "message": "Message",
+      "submitButton": "Envoyer",
+      "firstNamePlaceholder": "Entrez votre prénom",
+      "lastNamePlaceholder": "Entrez votre nom de famille",
+      "emailPlaceholder": "Entrez votre adresse e-mail",
+      "messagePlaceholder": "Entrez votre message",
+      "privacyPolicy": "En soumettant ce formulaire, vous acceptez notre",
+      "privacyPolicyLink": "politique de confidentialité"
+    }
+  },
   "product": {
-    "price": "Price",
-    "addToCart": "Add to Cart",
-    "outOfStock": "Out of Stock",
-    "productAddedToCart": "Product added to cart"
+    "Description": "Description",
+    "Colors": "Couleurs",
+    "Quantity": "Quantité",
+    "AddToCart": "Ajouter au panier",
+    "BuyNow": "Acheter maintenant"
   }
 }

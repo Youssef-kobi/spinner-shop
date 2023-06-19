@@ -11,16 +11,16 @@
     "button": "Shop Now"
   },
   "features": {
-    "headerTitle": "Features",
-    "title1": "Solid PP Plastic Construction",
-    "subText1": "Our Flying Spinners are made with high-quality and durable PP plastic that can withstand heavy usage and crashes. You can enjoy countless hours of fun without worrying about breakage or damage.",
-    "description1": "Our Flying Spinners are made with high-quality and durable PP plastic that can withstand heavy usage and crashes. You can enjoy countless hours of fun without worrying about breakage or damage. The solid construction also ensures a stable and smooth flight, making it easier for you to perform tricks and stunts.",
-    "title2": "Fast Charging Capability",
-    "description2": "Our Flying Spinners come with a fast-charging feature that allows you to charge them fully in just a few minutes. This means you can spend more time playing and less time waiting for the spinner to charge. The charger is also compact and easy to carry, making it convenient for you to charge on the go.",
-    "subText2": "Our Flying Spinners come with a fast-charging feature that allows you to charge them fully in just a few minutes.",
-    "title3": "Stress-Relieving",
-    "description3": "Our Flying Spinners are not only fun and exciting but also great stress-relievers. Playing with our spinners can help you relax and calm your mind, making them perfect for anyone who wants to relieve stress and anxiety.",
-    "subText3": "Playing with our spinners can help you relax and calm your mind."
+    "headerTitle": "Unleash the Fun with Our Feature-Rich Flying Spinners",
+    "title1": "Robust PP Plastic Build",
+    "subText1": "Experience the durability of our Flying Spinners, crafted from premium PP plastic to endure intense usage and accidental crashes.",
+    "description1": "Relish endless hours of exhilarating fun without fretting over damage. The robust construction guarantees a steady flight, enabling you to execute tricks and stunts with ease.",
+    "title2": "Rapid Charging for Non-Stop Fun",
+    "subText2": "Say goodbye to long waiting times with our Flying Spinners' swift charging feature, powering up your device in mere minutes.",
+    "description2": "Maximize your playtime and minimize charging downtime. The compact charger is a breeze to carry, offering the convenience of charging wherever you go.",
+    "title3": "Revolutionary AI Technology",
+    "subText3": "Elevate your play with our Flying Spinners, outfitted with cutting-edge AI technology for an enhanced gaming experience.",
+    "description3": "The AI technology tailors the spinner's flight to your style, creating a unique and personalized experience every time. It also ensures a safer flight by dodging obstacles and maintaining a stable flight path. Experience smarter play and more fun with our AI-powered Flying Spinners."
   },
   "Testimonials": {
     "headerTitle": "Testimonials",
@@ -46,10 +46,32 @@
     "privacyPolicy": "Privacy Policy | Terms and Conditions",
     "copyRight": "© 2023 Flying Spinners. All rights reserved."
   },
+  "aboutUs": {
+    "title": "About Our Flying Spinner Store",
+    "description": "Welcome to FlySpin, the online destination for high-quality, durable flying spinners that are perfect for both beginners and advanced users. Our mission is to inspire creativity and imagination through the joy of flying spinners, and we're passionate about providing our customers with the best selection, prices, and service.\n\nOur story began with a simple idea: to create a store that celebrates the fun and excitement of flying spinners, and to share that passion with the world. We saw a gap in the market for high-quality flying spinners that were both affordable and durable, and we set out to fill that gap with a carefully curated selection of products that meet our high standards for performance, design, and value.\n\nAt FlySpin, we believe that flying spinners are more than just toys. They're tools for self-expression, vehicles for creativity, and a way to connect with others who share our love of flight. That's why we're more than just a store – we're a community of like-minded individuals who are united by a passion for flying spinners and the joy they bring.\n\nOur team is made up of experts in the field of flying spinners, from engineers and designers to enthusiasts and collectors. We're dedicated to providing our customers with the best possible experience, whether you're looking for guidance and support as a beginner or want to take your flying spinner skills to the next level.\n\nWhen you shop with FlySpin, you can trust that you're getting the best selection of flying spinners on the market, backed by our commitment to quality and customer satisfaction. We're constantly adding new products and improving our service to meet the needs of our customers, and we can't wait to help you find your next favorite flying spinner.\n\nSo whether you're a seasoned pro or just getting started, come join our community of flying spinner enthusiasts and experience the thrill of flight with FlySpin."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Please fill out the form below to send us a message",
+    "form": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "message": "Message",
+      "submitButton": "Send",
+      "firstNamePlaceholder": "Enter your first name",
+      "lastNamePlaceholder": "Enter your last name",
+      "emailPlaceholder": "Enter your email address",
+      "messagePlaceholder": "Enter your message",
+      "privacyPolicy": "By submitting this form, you agree to our",
+      "privacyPolicyLink": "privacy policy"
+    }
+  },
   "product": {
-    "price": "Price",
-    "addToCart": "Add to Cart",
-    "outOfStock": "Out of Stock",
-    "productAddedToCart": "Product added to cart"
+    "Description": "Description",
+    "Colors": "Colors",
+    "Quantity": "Quantity",
+    "AddToCart": "Add to cart",
+    "BuyNow": "Buy Now"
   }
 }

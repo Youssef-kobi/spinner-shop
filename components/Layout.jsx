@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
         <title>FlySpin</title>
       </Head>
       <div
-        className='flex flex-col justify-between items-center   '
+        className='flex flex-col justify-between items-center overflow-hidden  '
         style={{
           backgroundImage: `url('${bg.src}')`,
           backgroundRepeat: 'no-repeat',

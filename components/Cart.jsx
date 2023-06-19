@@ -2,7 +2,15 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React, { useRef } from 'react'
 import { useStateContext } from '../Context/StateContext'
-import { urlFor } from '../lib/client'
+
+import bg from '../assets/bg.svg'
+import { FaChevronRight } from 'react-icons/fa'
+import {
+  HiOutlineMinusCircle,
+  HiOutlinePlusCircle,
+  HiOutlineShoppingBag,
+  HiOutlineTrash,
+} from 'react-icons/hi2'
 
 const Cart = () => {
   const cartRef = useRef()
@@ -17,20 +25,26 @@ const Cart = () => {
   } = useStateContext()
   return (
     <div
-      className={`h-screen flex  duration-700 ${
+      className={`h-screen flex text-gray-200 duration-700 ${
         showCart ? 'w-screen ' : 'w-0'
       }  top-0 right-0  fixed z-20`}
     >
       <div
         className={`fixed h-full flex flex-col justify-between w-3/4 duration-700 ease-in-out ${
           showCart ? 'translate-y-0 ' : 'translate-y-full'
-        }  top-0 left-0 opacity-30 bg-gray-900 z-10 cursor-pointer`}
-        onClick={()=> setShowCart(false)}
+        }  top-0 left-0 opacity-30 bg-gray-900 z-10  cursor-pointer`}
+        onClick={() => setShowCart(false)}
       />
       <div
         className={`fixed h-full flex flex-col justify-between w-1/4 duration-700 ease-in-out ${
           showCart ? 'translate-x-0 ' : 'translate-x-full'
-        }  top-0 right-0 bg-white-pure border z-10`}
+        }  top-0 right-0 z-10`}
+        style={{
+          backgroundImage: `url('${bg.src}')`,
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          height: '100%',
+        }}
         ref={cartRef}
       >
         <div className='h-12 flex justify-between items-center p-2 border-b'>
@@ -39,38 +53,14 @@ const Cart = () => {
             className='hover:scale-110 duration-300'
             onClick={() => setShowCart(false)}
           >
-            <svg
-              className='w-8 h-8'
-              fill='currentColor'
-              viewBox='0 0 20 20'
-              xmlns='http://www.w3.org/2000/svg'
-            >
-              <path
-                fillRule='evenodd'
-                d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z'
-                clipRule='evenodd'
-              />
-            </svg>
+            <FaChevronRight />
           </button>
           <span className='font-bold text-lg'>Your Cart</span>
-          <span className='text-red-800'>({totalQuantities} items)</span>
+          <span className='text-orange-600'>({totalQuantities} items)</span>
         </div>
-        {cartItems.length < 1 && (
-          <div className=' h-full flex flex-col justify-start mt-16 items-center'>
-            <svg
-              className='w-24 h-24'
-              fill='none'
-              stroke='currentColor'
-              viewBox='0 0 24 24'
-              xmlns='http://www.w3.org/2000/svg'
-            >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                strokeWidth={2}
-                d='M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z'
-              />
-            </svg>
+        {cartItems.length === 0 ? (
+          <div className=' h-full flex flex-col justify-center mb-16 items-center'>
+            <HiOutlineShoppingBag className='w-24 h-24' />
             <span>Your Shopping bag is empty</span>
             <Link className='w-full flex justify-center' href={'/'}>
               <button
@@ -82,113 +72,77 @@ const Cart = () => {
               </button>
             </Link>
           </div>
-        )}
-        <ul className='h-full'>
-          {cartItems.length >= 1 &&
-            cartItems
+        ) : (
+          <ul className='h-full flex flex-col m-2 gap-2'>
+            {cartItems
               ?.sort((a, b) => (a.name > b.name ? 1 : -1))
               .map((item, i) => {
                 return (
-                  <li className='flex h-40 items-center m-4' key={i}>
-                    <div className='p-4 bg-gray-light  rounded-lg'>
+                  <li
+                    className='flex items-center px-3 py-3 rounded-xl bg-blue-gem-300 bg-opacity-30 hover:bg-opacity-40'
+                    key={i}
+                  >
+                    <div className='rounded-lg'>
                       <Image
                         key={i}
-                        src={urlFor(item.image[0]).url()}
-                        alt='headphones'
+                        src={item.image.data.attributes.url}
+                        alt='spinner color'
                         width={100}
                         height={100}
                         // onMouseEnter={() => setImageIndex(i)}
                         className={`rounded`}
                       />
                     </div>
-                    <div className='flex flex-col justify-start w-full  ml-4 py-4'>
+                    <div className='flex flex-col justify-start w-full pl-3'>
                       <div className=' flex justify-between items-center'>
-                        <h4 className='text-2xl text-blue-dark font-bold'>
+                        <h4 className='text-xl text-blue-gem-200 font-bold'>
                           {item.name}
                         </h4>
-                        <h5 className='text-xl text-blue-dark font-bold'>
+                        <h5 className='text-xl text-blue-gem-300 font-bold'>
                           {item.price} MAD
                         </h5>
                       </div>
                       <div>
-                        <p className='text-sm text-gray-500'>
-                          small desc color, size..
+                        <p className='text-sm text-blue-gem-200 text-opacity-80'>
+                          {item.sku}
                         </p>
                       </div>
                       <div className='flex justify-between items-center'>
-                        <p className='flex justify-center items-center px-2 py-1 mt-2 border w-fit select-none rounded-xl '>
+                        <div className='flex justify-center items-center select-none rounded-xl '>
                           <span
                             className='cursor-pointer'
                             onClick={() =>
-                              toggleCartItemQuantity(item._id, 'dec')
+                              toggleCartItemQuantity(item.id, 'dec')
                             }
                           >
-                            <svg
-                              className='w-8 h-8 hover:fill-slate-200'
-                              fill='none'
-                              stroke='currentColor'
-                              viewBox='0 0 24 24'
-                              xmlns='http://www.w3.org/2000/svg'
-                            >
-                              <path
-                                strokeLinecap='round'
-                                strokeLinejoin='round'
-                                strokeWidth={2}
-                                d='M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z'
-                              />
-                            </svg>
+                            <HiOutlineMinusCircle className='w-10 h-10 hover:scale-110 duration-300 drop-shadow-[0_100px_15px_rgba(0,0,0,0.25)] text-red-700' />
                           </span>
-                          <span className='font-bold text-lg px-2'>
+                          <span className='font-bold text-blue-gem-200 text-2xl px-2'>
                             {item.quantity}
                           </span>
                           <span
                             className='cursor-pointer'
                             onClick={() =>
-                              toggleCartItemQuantity(item._id, 'inc')
+                              toggleCartItemQuantity(item.id, 'inc')
                             }
                           >
-                            <svg
-                              className='w-8 h-8 hover:fill-slate-200'
-                              fill='none'
-                              stroke='currentColor'
-                              viewBox='0 0 24 24'
-                              xmlns='http://www.w3.org/2000/svg'
-                            >
-                              <path
-                                strokeLinecap='round'
-                                strokeLinejoin='round'
-                                strokeWidth={2}
-                                d='M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z'
-                              />
-                            </svg>
+                            <HiOutlinePlusCircle className='w-10 h-10 text-green-700 hover:scale-110 duration-300 drop-shadow-[0_15px_15px_rgba(0,0,0,0.25)]' />
                           </span>
-                        </p>
+                        </div>
                         <button
                           type='button'
                           onClick={() => onRemove(item)}
                           className='hover:scale-110 duration-300'
                         >
-                          <svg
-                            className='w-6 h-6'
-                            fill='none'
-                            stroke='red'
-                            viewBox='0 0 24 24'
-                            xmlns='http://www.w3.org/2000/svg'
-                          >
-                            <path
-                              strokeLinecap='round'
-                              strokeLinejoin='round'
-                              strokeWidth={2}
-                              d='M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16'
-                            />
-                          </svg>
+                          <HiOutlineTrash className='w-8 h-8 text-orange-600' />
                         </button>
                       </div>
                     </div>
                   </li>
                 )
               })}
-        </ul>
+          </ul>
+        )}
         {cartItems.length >= 1 && (
           <div className='p-5 flex flex-col justify-between'>
             <div className='p-5 flex justify-between '>

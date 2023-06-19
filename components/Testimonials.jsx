@@ -34,13 +34,13 @@ const Testimonials = () => {
     <section id='testimonials' className='flex flex-col items-center w-full'>
       <h2
         data-aos='fade-down'
-        className='text-7xl mb-14 text-blue-gem-50 italic font-extrabold p-4'
+        className='text-5xl mb-14 text-center text-blue-gem-50 italic font-extrabold p-4'
       >
         Testimonials
       </h2>
       <div className='flex justify-center container'>
         <Swiper
-          className='w-full lg:w-2/4 rounded-3xl overflow-hidden'
+          className='w-full lg:w-2/4 rounded-3xl '
           spaceBetween={4}
           slidesPerView={1}
           modules={[Pagination]}
@@ -59,8 +59,12 @@ const Testimonials = () => {
                   alt=''
                   className=' border-2 border-solid border-blue-gem-600 rounded-full '
                 />
-                <h5 className='mt-2 font-semibold text-blue-100'>{slide.name}</h5>
-                <small className='text-center text-sm text-blue-100 text-opacity-80'>{slide.text}</small>
+                <h5 className='mt-2 font-semibold text-blue-100'>
+                  {slide.name}
+                </h5>
+                <small className='text-center text-sm sm:text-base md:text-lg text-blue-100 text-opacity-80'>
+                  {slide.text}
+                </small>
               </div>
             </SwiperSlide>
           ))}
