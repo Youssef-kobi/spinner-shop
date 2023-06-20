@@ -162,7 +162,9 @@ const ProductDetails = ({ product }) => {
 
 export default ProductDetails
 export const getStaticPaths = async () => {
-  const res = await fetch(`http://localhost:1337/api/products`)
+  const res = await fetch(
+    `https://e4f0-105-66-135-100.eu.ngrok.io/api/products`
+  )
   const products = await res.json()
   // console.log(products)
 
@@ -175,7 +177,7 @@ export const getStaticPaths = async () => {
 export async function getStaticProps({ params, locale }) {
   const { slug } = params
   const res = await fetch(
-    `http://localhost:1337/api/products/?${slug}&populate=images,Color.image`
+    `https://e4f0-105-66-135-100.eu.ngrok.io/api/products/?${slug}&populate=images,Color.image`
   )
   const product = await res.json()
   // console.log(product)

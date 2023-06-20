@@ -53,7 +53,6 @@ const Features = () => {
               backgroundImage: `url('${bg.src}')`,
               backgroundRepeat: 'no-repeat',
               backgroundSize: 'cover',
-              // height: '100%',
             }}
             className='w-full lg:w-2/4 px-6 py-8 rounded-b-3xl lg:rounded-none lg:rounded-r-3xl drop-shadow-[0_20px_15px_rgba(0,0,0,0.25)] lg:drop-shadow-[0_100px_15px_rgba(0,0,0,0.25)] backdrop-blur-lg shadow-inner lg:h-[300px] '
           >
@@ -147,7 +146,6 @@ const Features = () => {
               backgroundImage: `url('${bg.src}')`,
               backgroundRepeat: 'no-repeat',
               backgroundSize: 'cover',
-              // height: '100%',
             }}
             className='w-full lg:w-2/4 px-6 py-8 rounded-b-3xl lg:rounded-none lg:rounded-r-3xl drop-shadow-[0_20px_15px_rgba(0,0,0,0.25)] lg:drop-shadow-[0_100px_15px_rgba(0,0,0,0.25)] backdrop-blur-lg shadow-inner lg:h-[300px] '
           >
@@ -176,6 +174,7 @@ const Features = () => {
             </p>
           </div>
         </div>
+        
       </div>
     </div>
   )
