@@ -31,6 +31,28 @@
     "title3": "Cadeau parfait pour les enfants",
     "review3": "J'ai acheté le Flying Spinner comme cadeau pour mon neveu, et il l'adore absolument. C'est facile pour lui à contrôler et il peut passer des heures à jouer avec. Je recommande vivement ce jouet pour tous les enfants."
   },
+  "checkout": {
+    "shipping_information": "Informations de livraison",
+    "name": "Nom",
+    "name_placeholder": "John Doe",
+    "email": "Email",
+    "email_placeholder": "john-doe@example.com",
+    "phone": "Téléphone",
+    "phone_placeholder": "+212 6 00 00 00 00",
+    "address": "Adresse",
+    "address_placeholder": "Adresse de rue, Boîte postale, Nom de l'entreprise, c/o",
+    "city": "Ville",
+    "city_placeholder": "Casablanca",
+    "state": "État",
+    "state_placeholder": "Grand Casablanca",
+    "zip": "Code postal",
+    "zip_placeholder": "12345",
+    "place_order": "Passer la commande",
+    "order_summary": "Résumé de la commande",
+    "edit_order": "Modifier la commande",
+    "subtotal": "Sous-total",
+    "quantity": "Quantité"
+  },
   "footer": {
     "contactInformation": "Coordonnées",
     "socialMediaLinks": "Réseaux sociaux",

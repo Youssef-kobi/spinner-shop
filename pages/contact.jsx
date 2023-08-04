@@ -15,7 +15,7 @@ const Contact = () => {
   const { t } = useTranslation('common')
 
   return (
-    <section className='flex flex-col items-center justify-center mt-32 bg-white bg-opacity-30 p-4 rounded-3xl'>
+    <section className='flex flex-col items-center justify-center mt-32 bg-gray-900 bg-opacity-60 text-blue-gem-200 p-4 rounded-3xl'>
       <h1 className='text-4xl font-bold my-8'>{t('contact.title')}</h1>
       <p className='text-lg lg:text-xl text-center mb-8'>
         {t('contact.description')}
@@ -24,7 +24,7 @@ const Contact = () => {
         <div className='flex flex-wrap mb-6'>
           <div className='w-full md:w-1/2 px-3 mb-6 md:mb-0'>
             <label
-              className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'
+              className='block uppercase tracking-wide text-gray-200 text-xs font-bold mb-2'
               htmlFor='grid-first-name'
             >
               {t('contact.form.firstName')}
@@ -38,7 +38,7 @@ const Contact = () => {
           </div>
           <div className='w-full md:w-1/2 px-3'>
             <label
-              className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'
+              className='block uppercase tracking-wide text-gray-200 text-xs font-bold mb-2'
               htmlFor='grid-last-name'
             >
               {t('contact.form.lastName')}
@@ -54,7 +54,7 @@ const Contact = () => {
         <div className='flex flex-wrap mb-6'>
           <div className='w-full px-3'>
             <label
-              className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'
+              className='block uppercase tracking-wide text-gray-200 text-xs font-bold mb-2'
               htmlFor='grid-email'
             >
               {t('contact.form.email')}
@@ -70,7 +70,7 @@ const Contact = () => {
         <div className='flex flex-wrap mb-6'>
           <div className='w-full px-3'>
             <label
-              className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'
+              className='block uppercase tracking-wide text-gray-200 text-xs font-bold mb-2'
               htmlFor='grid-message'
             >
               {t('contact.form.message')}
@@ -93,7 +93,7 @@ const Contact = () => {
             </button>
           </div>
           <div className='md:w-2/3 px-3'>
-            <div className='text-gray-700 font-bold'>
+            <div className='text-gray-200 font-bold'>
               {t('contact.form.privacyPolicy')}{' '}
               <a className='underline' href='/privacy-policy'>
                 {t('contact.form.privacyPolicyLink')}

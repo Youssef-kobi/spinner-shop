@@ -30,13 +30,13 @@ const Cart = () => {
       }  top-0 right-0  fixed z-20`}
     >
       <div
-        className={`fixed h-full flex flex-col justify-between w-3/4 duration-700 ease-in-out ${
+        className={`fixed h-full flex flex-col justify-between w-1/4 lg:w-3/4 duration-700 ease-in-out ${
           showCart ? 'translate-y-0 ' : 'translate-y-full'
         }  top-0 left-0 opacity-30 bg-gray-900 z-10  cursor-pointer`}
         onClick={() => setShowCart(false)}
       />
       <div
-        className={`fixed h-full flex flex-col justify-between w-1/4 duration-700 ease-in-out ${
+        className={`fixed h-full flex flex-col justify-between w-3/4 lg:w-1/4 duration-700 ease-in-out ${
           showCart ? 'translate-x-0 ' : 'translate-x-full'
         }  top-0 right-0 z-10`}
         style={{
@@ -150,7 +150,7 @@ const Cart = () => {
               <h3 className='font-bold'>{totalPrice}MAD</h3>
             </div>
             <div className='text-center'>
-              <Link href='/success'>
+              <Link href='/checkout'>
                 <button
                   type='button'
                   className='w-2/4 m-2 bg-red-600 hover:bg-red-800 hover:scale-110 duration-300 py-2 px-5 rounded-2xl shadow-md shadow-black-faded text-lg font-bold text-white-light'

@@ -7,11 +7,15 @@ import logo from '../assets/Logo.svg'
 import { CgShoppingCart } from 'react-icons/cg'
 import { FiMenu } from 'react-icons/fi'
 import { useTranslation } from 'next-i18next'
+
+import bg from '../assets/bg.svg'
 const Navbar = () => {
   const { t } = useTranslation('common')
   const { totalQuantities, setShowCart, showCart } = useStateContext()
   const [spin, setSpin] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const [isLoading, setIsLoading] = useState(true)
   const Links = [
     { text: t('nav.home'), link: '/' },
     { text: t('nav.faq'), link: '/faq' },
@@ -30,8 +34,10 @@ const Navbar = () => {
       clearTimeout(timeoutId2)
     }
   }, [])
-  return (
-    <nav className='flex items-center justify-between p-4 rounded-b-3xl w-full lg:w-4/5 z-20'>
+  return false ? (
+    <div className='h-screen w-screen bg-slate-800' />
+  ) : (
+    <nav className='flex items-center text-gray-200 justify-between p-4 rounded-b-3xl w-full lg:w-4/5 z-20'>
       {/* Hamburger */}
       <div
         className='lg:hidden'
@@ -49,6 +55,8 @@ const Navbar = () => {
             alt='logo'
             width={60}
             height={60}
+            priority
+            // onLoadingComplete={() => setIsLoading(false)}
             data-aos={{
               rotate: '-360',
               duration: 3000,
@@ -63,7 +71,7 @@ const Navbar = () => {
         </Link>
       </div>
       {/* Links */}
-      <div className='hidden lg:flex items-center  text-2xl text-blue-200 font-semibold '>
+      <div className='hidden lg:flex items-center text-2xl text-blue-200 font-semibold '>
         {Links.map((link, index) => (
           <Link
             className='mx-4 hover:scale-110 duration-100 '
@@ -81,7 +89,13 @@ const Navbar = () => {
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className={`flex flex-col items-center  z-10 w-2/5 bg-blue-gem-200 shadow-lg justify-center h-full rounded-r-3xl ${
+            style={{
+              backgroundImage: `url('${bg.src}')`,
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'cover',
+              height: '100%',
+            }}
+            className={`flex flex-col items-center  z-10 w-3/4 bg-blue-gem-200 shadow-lg justify-center h-full rounded-r-3xl ${
               isMenuOpen
                 ? 'transform:translateX(0%);'
                 : 'transform:translateX(-100%);'

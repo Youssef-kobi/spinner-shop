@@ -1,14 +1,42 @@
-import React, { createContext, useContext, useState } from 'react'
+import React, { createContext, useContext, useEffect, useState } from 'react'
 import { toast } from 'react-toastify'
 
 const Context = createContext()
 const StateContext = ({ children }) => {
   const [showCart, setShowCart] = useState(false)
-  const [cartItems, setCartItems] = useState([])
   const [totalPrice, setTotalPrice] = useState(0)
   const [totalQuantities, setTotalQuantities] = useState(0)
   const [qty, setQty] = useState(1)
+  const [cartItems, setCartItems] = useState([])
 
+  // On client side, check local storage and update state
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const localCartItems = window.localStorage.getItem('cartItems')
+      if (localCartItems) {
+        setCartItems(JSON.parse(localCartItems))
+        setTotalPrice(
+          JSON.parse(localCartItems).reduce(
+            (total, cartItem) => total + cartItem.price * cartItem.quantity,
+            0
+          )
+        )
+        setTotalQuantities(
+          JSON.parse(localCartItems).reduce(
+            (total, cartItem) => total + cartItem.quantity,
+            0
+          )
+        )
+      }
+    }
+  }, [])
+
+  // Any time cartItems changes, update local storage
+  useEffect(() => {
+    if (typeof window !== 'undefined' && cartItems.length !== 0) {
+      window.localStorage.setItem('cartItems', JSON.stringify(cartItems))
+    }
+  }, [cartItems])
   const onRemove = (product) => {
     const foundProduct = cartItems.find((item) => item.id === product.id)
     setCartItems((prevCartItems) =>
@@ -21,6 +49,13 @@ const StateContext = ({ children }) => {
     setTotalQuantities(
       (prevTotalQuantities) => prevTotalQuantities - foundProduct.quantity
     )
+  }
+  const onEmptyCart = () => {
+    setCartItems([])
+    setTotalPrice(0)
+    setTotalQuantities(0)
+    setQty(1)
+    window.localStorage.removeItem('cartItems')
   }
 
   const onAdd = (product, quantity) => {
@@ -80,6 +115,7 @@ const StateContext = ({ children }) => {
         cartItems,
         totalPrice,
         totalQuantities,
+        onEmptyCart,
         qty,
         incQty,
         decQty,

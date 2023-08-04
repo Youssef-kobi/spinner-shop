@@ -31,6 +31,28 @@
     "title3": "Perfect Gift for Kids",
     "review3": "I bought the Flying Spinner as a gift for my nephew, and he absolutely loves it. It's easy for him to control, and he loves showing off his tricks to his friends."
   },
+  "checkout": {
+    "shipping_information": "Shipping Information",
+    "name": "Name",
+    "name_placeholder": "John Doe",
+    "email": "Email",
+    "email_placeholder": "john-doe@example.com",
+    "phone": "Phone",
+    "phone_placeholder": "+212 6 00 00 00 00",
+    "address": "Address",
+    "address_placeholder": "Street address, P.O. box, company name, c/o",
+    "city": "City",
+    "city_placeholder": "Casablanca",
+    "state": "State",
+    "state_placeholder": "Grand Casablanca",
+    "zip": "Zip",
+    "zip_placeholder": "12345",
+    "place_order": "Place Order",
+    "order_summary": "Order Summary",
+    "edit_order": "Edit Order",
+    "subtotal": "Subtotal",
+    "quantity": "Quantity"
+  },
   "footer": {
     "contactInformation": "Contact Information",
     "socialMediaLinks": "Social Media Links",

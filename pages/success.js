@@ -3,7 +3,7 @@ import React from 'react'
 
 const success = () => {
   return (
-    <div className='flex justify-center items-center'>
+    <div className='w-full mt-28 flex justify-center items-center'>
       <div className='bg-gray-300 p-10 w-2/4 rounded-2xl flex flex-col items-center justify-center'>
         <svg
           className='w-12 h-12'

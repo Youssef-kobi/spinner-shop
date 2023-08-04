@@ -3,6 +3,20 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
+@layer utilities {
+    @variants responsive {
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .no-scrollbar {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+      }
+    }
+  }
 html {
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
@@ -16,7 +30,24 @@ html {
 .aos-init[data-aos][data-aos].aos-animate {
   transform: unset;
 }
+/* Apply gradient to scrollbar */
+::-webkit-scrollbar {
+  width: 12px; /* Adjust the width as needed */
+}
 
+::-webkit-scrollbar-track {
+  background-color: hsl(244, 39%, 32%);
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to bottom, hsl(244, 39%, 32%), hsl(267, 100%, 50%));
+  border-radius: 10px;
+}
+
+/* Apply smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
 .gradientButton::before {
     content: '';
     position: absolute;
