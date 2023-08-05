@@ -49,7 +49,7 @@ const CheckoutPage = () => {
       console.log(data)
       // Post to the Strapi's Customer endpoint
       const customerResponse = await axios.post(
-        'http://localhost:1337/api/Customers',
+        'https://flyspin-strapi-s6drp.ondigitalocean.app/api/Customers',
         {
           data: {
             name: data.name,
@@ -63,13 +63,16 @@ const CheckoutPage = () => {
         }
       )
       console.log(customerResponse.data.data.id )
-      await axios.post('http://localhost:1337/api/orders', {
-        data: {
-          OrderStatus: 'Pending',
-          OrderItems: cartItems,
-          customer: customerResponse.data.data.id,
-        },
-      })
+      await axios.post(
+        'https://flyspin-strapi-s6drp.ondigitalocean.app/api/orders',
+        {
+          data: {
+            OrderStatus: 'Pending',
+            OrderItems: cartItems,
+            customer: customerResponse.data.data.id,
+          },
+        }
+      )
       onEmptyCart()
       router.push('/success')
     } catch (error) {

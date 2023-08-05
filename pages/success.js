@@ -1,43 +1,43 @@
 import Link from 'next/link'
 import React from 'react'
+import { HiOutlineShoppingBag } from 'react-icons/hi2'
+import { useTranslation } from 'next-i18next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale)),
+      // Will be passed to the page component as props
+    },
+  }
+}
+const Success = () => {
+  const { t } = useTranslation('common')
 
-const success = () => {
   return (
-    <div className='w-full mt-28 flex justify-center items-center'>
-      <div className='bg-gray-300 p-10 w-2/4 rounded-2xl flex flex-col items-center justify-center'>
-        <svg
-          className='w-12 h-12'
-          fill='#16a34a'
-          viewBox='0 0 20 20'
-          xmlns='http://www.w3.org/2000/svg'
-        >
-          <path
-            fillRule='evenodd'
-            d='M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z'
-            clipRule='evenodd'
-          />
-        </svg>
-        <h2 className='text-blue-dark font-bold text-2xl'>
-          Thank You For your Purchase
+    <div className='w-full mt-10 lg:mb-28 lg:mt-56 flex justify-center items-center'>
+      <div className='p-4 lg:p-10 w-11/12 sm:w-3/4 lg:w-1/2 xl:w-1/3 rounded-2xl flex flex-col items-center justify-center bg-gray-900 bg-opacity-60 text-blue-gem-200'>
+        <HiOutlineShoppingBag className='w-12 h-12 text-white' />
+        <h2 className='text-white font-bold text-2xl mt-4 lg:mt-8'>
+          {t('success.thankYou')}
         </h2>
-        <p className='font-semibold text-sm '>
-          check your email address for receipt
+        <p className='font-semibold text-sm text-white mt-4'>
+          {t('success.checkEmail')}
         </p>
-        <p className='mt-6 font-bold text-base '>
-          if you have any questions, please email
-          <span className='text-red-600'> orders@yel-kobi.com</span>
+        <p className='font-bold text-base text-white mt-2'>
+          {t('success.questions')}
+          <span className='text-red-600'> {t('success.contactEmail')}</span>
         </p>
-        <Link href='/'>
-          <button
-            type='button'
-            className='uppercase mt-6 rounded-xl text-white-pure font-light bg-red-600 hover:bg-red-800 py-2 px-4 '
-          >
-            Continue Shopping
-          </button>
-        </Link>
+
+        <button
+          type='button'
+          className=' gradientButton relative overflow-hidden rounded bg-orange-600 hover:bg-orange-500 px-6 py-2 '
+        >
+          <Link href='/'>{t('success.continueShopping')}</Link>  
+        </button>
       </div>
     </div>
   )
 }
 
-export default success
+export default Success

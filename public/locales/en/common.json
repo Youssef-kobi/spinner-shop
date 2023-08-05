@@ -95,5 +95,12 @@
     "Quantity": "Quantity",
     "AddToCart": "Add to cart",
     "BuyNow": "Buy Now"
+  },
+  "success": {
+    "thankYou": "Thank You For your Purchase",
+    "checkEmail": "Check your email address for receipt",
+    "questions": "If you have any questions, please email",
+    "contactEmail": "orders@yel-kobi.com",
+    "continueShopping": "Continue Shopping"
   }
 }
