@@ -14,8 +14,6 @@ const Navbar = () => {
   const { totalQuantities, setShowCart, showCart } = useStateContext()
   const [spin, setSpin] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-
-  const [isLoading, setIsLoading] = useState(true)
   const Links = [
     { text: t('nav.home'), link: '/' },
     { text: t('nav.faq'), link: '/faq' },
