@@ -50,6 +50,7 @@ const Navbar = () => {
         <Link className='flex items-center' href='/'>
           <Image
             src={logo}
+            
             alt='logo'
             width={60}
             height={60}
